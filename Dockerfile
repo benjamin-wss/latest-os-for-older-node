@@ -1,12 +1,12 @@
-FROM amazonlinux:2
+FROM amazonlinux:2023
 
 # Install required packages
 RUN yum -y update && \
-    yum -y install curl git tar gzip
+    yum -y install curl git tar gzip --allowerasing
 
 # Install NVM (Node Version Manager)
 ENV NVM_DIR /root/.nvm
-ENV NODE_VERSION 14.18.1
+ENV NODE_VERSION 9.11.2
 
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash && \
     . "$NVM_DIR/nvm.sh" && \
