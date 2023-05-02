@@ -1,0 +1,12 @@
+{
+  "name": "latest-os-for-older-node",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "docker build -t latest-alpine-for-older-node .",
+    "run": "docker run -it --rm latest-alpine-for-older-node",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
